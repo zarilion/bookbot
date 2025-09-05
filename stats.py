@@ -24,3 +24,7 @@ def sort_dict(num_characters):
             })
         result.sort(key=sort_on, reverse=True)
     return result
+
+def get_book_text(book_path):
+    with open(book_path) as file:
+        return file.read()
