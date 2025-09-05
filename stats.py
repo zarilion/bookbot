@@ -13,11 +13,14 @@ def number_of_characters(text):
     return characters
 
 def sort_on(items):
-    return items["num"]
+    return items["count"]
 
 def sort_dict(num_characters):
     result = []
-    for char, num in num_characters:
-        result.append({"char": char, "num": num_characters[char]})
+    for char in num_characters:
+        result.append({
+            "char": char, 
+            "count": num_characters[char]
+            })
         result.sort(key=sort_on, reverse=True)
     return result
